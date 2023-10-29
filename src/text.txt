@@ -1,0 +1,182 @@
+import React, { useState } from "react";
+
+function Register(){
+  //js code
+  const[userData,setUserData]=useState({
+    uname:"",
+    email:"",
+    phone:"",
+    password:""
+  })
+
+  const getUserData =(e)=>{
+    const{name,value}=e.target
+    console.log(name,value);
+    setUserData({...userData,[name]:value})
+  }
+  console.log(userData);
+
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    alert(`Student name :${userData.uname}
+          Email id :${userData.email}
+          Password :${userData.password}
+          Confirm Password :${userData.confirm_password}
+    `)
+  }
+  
+ 
+
+  return(
+    //jsx code
+    <div >
+      <div style={{marginTop:'10px',textAlign:'center'}}>
+        <h1></h1>
+      </div>
+      <div style={{marginTop:'10px',textAlign:'center'}}>
+        <form onSubmit={handleSubmit}>
+          <div style={{marginTop:'10px',textAlign:'center'}}>
+            <label  htmlFor="sname">Name : </label>
+           
+            <input type="text" name="uname" onChange={(e)=>getUserData(e)} placeholder="Enter name" style={{width:'400px',padding:'10px',borderRadius:'10px'}}/>
+          </div>
+          
+          <div style={{marginTop:'10px',textAlign:'center'}}>
+            <label htmlFor="email">Email :  </label>  
+            <input type="text" name="email" onChange={(e)=>getUserData(e)} placeholder="Enter email" style={{width:'400px',padding:'10px',borderRadius:'10px'}}/>
+          </div>
+
+          <div style={{marginTop:'10px',textAlign:'center'}}>
+           <label htmlFor="number"> Phone No: </label>
+            <input type="number" name="number" onChange={(e)=>getUserData(e)} placeholder="Enter Phone No" style={{width:'400px',padding:'10px',borderRadius:'10px'}}/>
+          </div>
+          
+          <div style={{marginTop:'10px',textAlign:'center'}}>
+           <label htmlFor="password">  Password :  </label>
+            <input type="password" name="password" onChange={(e)=>getUserData(e)} placeholder="Password" style={{width:'400px',padding:'10px',borderRadius:'10px'}}/>
+          </div>
+          
+         
+           
+           <div style={{marginTop:'10px',textAlign:'center'}}>
+            <input type="submit" value={'Submit'} style={{backgroundColor:'white',fontSize:'20px',width:'150px',borderRadius:'10px' }}/>
+           </div>
+
+        </form>
+      </div>
+      
+    </div>
+ 
+  )
+
+  }
+  export default Register;
+
+
+
+
+
+
+
+.container{
+    display: flex ;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 20px;
+    background: white;
+    padding-bottom: 30px;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10x;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.text{
+    font-size: 48px;
+}
+.inputs{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: 25px;
+}
+.input{
+    display: flex;
+    align-items: center;  
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    background: white;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React from 'react'
+
+function Register(){
+  //js code
+  const[userData,setUserData]=useState({
+    uname:"",
+    email:"",
+    phone:"",
+    password:""
+  })
+
+  const getUserData =(e)=>{
+    const{name,value}=e.target
+    console.log(name,value);
+    setUserData({...userData,[name]:value})
+  }
+  console.log(userData);
+
+  const handleSubmit=(e)=>{
+    e.preventDefault()
+    alert(`Student name :${userData.uname}
+          Email id :${userData.email}
+          Password :${userData.password}
+          Confirm Password :${userData.confirm_password}
+    `)
+  }
+  
+
+  return (
+    <div className='container'>
+      <div className='header'>
+        <div className='text'>Register Now</div>
+      </div>
+      <div className="inputs">
+        <div className='input'>
+          <input type="text" />
+        </div>
+        <div className='input'>
+          <input type="email" />
+        </div>
+        <div className='input'>
+          <input type="number" />
+        </div>
+        <div className='input'>
+          <input type="password" />
+        </div>
+      </div>
+      <div className="submit">
+        <div className="button">Register</div>
+      </div>
+    </div>
+  )
+}
+
+export default Register
