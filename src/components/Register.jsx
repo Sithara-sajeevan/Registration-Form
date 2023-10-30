@@ -6,7 +6,8 @@ function Register(){
     uname:"",
     email:"",
     phone:"",
-    password:""
+    password:"",
+    Registration_successfull:""
   })
 
   const getUserData =(e)=>{
@@ -22,6 +23,7 @@ function Register(){
           Email id :${userData.email}
           Phone:${userData.number}
            Password :${userData.password}
+           Registration successfull${userData.Registration_successfull}
     `)
   }
   
@@ -38,28 +40,29 @@ function Register(){
           <div style={{marginTop:'10px'}}>
             <label  htmlFor="sname">Name : </label>
            
-            <input  type="text" name="uname" onChange={(e)=>getUserData(e)} placeholder="Enter name" style={{width:'300px',padding:'10px',borderRadius:'10px'}}/>
+            <input  type="text" name="uname" onChange={(e)=>getUserData(e)} placeholder="Enter name" style={{width:'300px',padding:'10px',borderRadius:'5px'}}/>
           </div>
           
           <div style={{marginTop:'10px'}}>
             <label htmlFor="email">Email :  </label>  
-            <input type="text" name="email" onChange={(e)=>getUserData(e)} placeholder="Enter email" style={{width:'300px',padding:'10px',borderRadius:'10px'}}/>
+            <input type="text" name="email" onChange={(e)=>getUserData(e)} placeholder="Enter email" style={{width:'300px',padding:'10px',borderRadius:'5px'}}/>
           </div>
 
           <div style={{marginTop:'10px'}}>
            <label htmlFor="number"> Ph No: </label>
-            <input type="text" name="number" onChange={(e)=>getUserData(e)} placeholder="Enter Phone No" style={{width:'300px',padding:'10px',borderRadius:'10px'}}/>
+            <input type="text" name="number" onChange={(e)=>getUserData(e)} placeholder="Enter Phone No" style={{width:'300px',padding:'10px',borderRadius:'5px'}}/>
           </div>
           
           <div style={{marginTop:'10px'}}>
            <label htmlFor="password">  Password :  </label>
-            <input type="password" name="password" onChange={(e)=>getUserData(e)} placeholder="Password" style={{width:'300px',padding:'10px',borderRadius:'10px'}}/>
+            <input type="password" name="password" onChange={(e)=>getUserData(e)} placeholder="Password" style={{width:'300px',marginRight:'30px',padding:'10px',borderRadius:'5px'}}/>
           </div>
+          
           
          
            
            <div style={{marginTop:'10px'}}>
-            <input type="submit" value={'Submit'} style={{backgroundColor:'violet',fontSize:'20px',width:'150px',borderRadius:'10px' }}/>
+            <input type="submit" value={'Register'} style={{backgroundColor:'skyblue',fontSize:'20px',width:'150px',borderRadius:'5px' }}/>
            </div>
 
         </form>
